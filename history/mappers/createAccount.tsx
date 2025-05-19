@@ -7,8 +7,6 @@ import {
 } from "../types";
 import { createOperationString, getIconString, formatAmount } from "../helpers";
 
-import { t } from "i18next";
-
 interface CreateAccountHistoryItemData {
   operation: any;
   stellarExpertUrl: string;
@@ -39,7 +37,7 @@ export const mapCreateAccountHistoryItem = ({
 
   const transactionDetails: TransactionDetails = {
     operation,
-    transactionTitle: t("Create account"),
+    transactionTitle: "Create account",
     transactionType: TransactionType.CREATE_ACCOUNT,
     fee,
     status: TransactionStatus.SUCCESS,
@@ -55,10 +53,10 @@ export const mapCreateAccountHistoryItem = ({
 
   return {
     transactionDetails,
-    rowText: t("Create account"),
+    rowText: "Create account",
     dateText: date,
     amountText: formattedAmount,
-    actionText: isRecipient ? t("Received") : t("Sent"),
+    actionText: isRecipient ? "Received" : "Sent",
     iconString,
     actionIconString,
     transactionStatus: TransactionStatus.SUCCESS,
