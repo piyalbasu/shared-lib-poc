@@ -1,5 +1,3 @@
-import { t } from "i18next";
-
 import BigNumber from "bignumber.js";
 import {
   TransactionDetails,
@@ -16,15 +14,13 @@ export const mapChangeTrustHistoryItem = (
   operation: any,
   stellarExpertUrl: string,
   date: string,
-  fee: string,
+  fee: string
 ): HistoryItemData => {
   const { asset_code: destAssetCode, id } = operation;
 
   const isRemovingTrustline = BigNumber(operation?.limit).eq(0);
 
-  const actionText = isRemovingTrustline
-    ? t("Remove trustline")
-    : t("Add trustline");
+  const actionText = isRemovingTrustline ? "Remove trustline" : "Add trustline";
 
   const iconString = null;
 
@@ -53,7 +49,7 @@ export const mapChangeTrustHistoryItem = (
     isAddingFunds: null,
     operationString: createOperationString(
       TransactionType.CHANGE_TRUST,
-      operation,
+      operation
     ),
   };
 };

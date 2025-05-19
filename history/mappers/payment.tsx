@@ -7,7 +7,6 @@ import {
 } from "../types";
 import { formatAmount } from "../helpers";
 
-import { t } from "i18next";
 import { createOperationString } from "../helpers";
 /**
  * Maps payment operation data to history item data
@@ -37,7 +36,7 @@ export const mapPaymentHistoryItem = (
 
   const iconString = null;
   const actionIconString = isRecipient ? "ArrowCircleDown" : "ArrowCircleUp";
-  const actionText = isRecipient ? t("Received") : t("Sent");
+  const actionText = isRecipient ? "Received" : "Sent";
 
   const transactionTitle = `${actionText} ${destAssetCode}`;
 

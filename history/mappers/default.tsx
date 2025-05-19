@@ -6,7 +6,6 @@ import {
 } from "../types";
 import { createOperationString, getIconString } from "../helpers";
 
-import { t } from "i18next";
 import { capitalize } from "lodash";
 
 /**
@@ -16,7 +15,7 @@ export const createDefaultHistoryItemData = (
   operation: any,
   stellarExpertUrl: string,
   date: string,
-  fee: string,
+  fee: string
 ): HistoryItemData => {
   const { type, id, amount = null } = operation;
 
@@ -41,7 +40,7 @@ export const createDefaultHistoryItemData = (
     dateText: date,
     rowText,
     amountText: amount,
-    actionText: t("history.transactionHistory.transaction"),
+    actionText: "Transaction",
     iconString,
     actionIconString,
     transactionStatus: TransactionStatus.SUCCESS,
