@@ -1,0 +1,27 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Dependency directories
+node_modules/
+bower_components/
+
+# testing
+coverage/
+__tests__
+
+# Builds
+dist/
+build/
+out/
+
+# Misc
+.DS_Store
+.env
+.env.*
+.local
+/tmp
